@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DXP/src" modelPluginID="DXP" modelName="DXP" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
+  <foreignModel>dXP.ecore</foreignModel>
+  <genPackages prefix="DXP" basePackage="pl.edu.agh.uci" disposableProviderFactory="true"
+      ecorePackage="dXP.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dXP.ecore#//OrgType">
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//OrgType/department"/>
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//OrgType/school"/>
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//OrgType/major"/>
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//OrgType/Discipline"/>
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//OrgType/Specjalization"/>
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//OrgType/Misc"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="dXP.ecore#//Role">
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//Role/student"/>
+      <genEnumLiterals ecoreEnumLiteral="dXP.ecore#//Role/teacher"/>
+    </genEnums>
+    <genClasses ecoreClass="dXP.ecore#//OneRoster">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//OneRoster/academicsession"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//OneRoster/org"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//OneRoster/enrolment"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//Course" labelFeature="#//dXP/Course/courseCode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Course/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Course/courseCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//Course/class"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="dXP.ecore#//Base">
+      <genFeatures createChild="false" propertyCategory="Base" propertyDescription=""
+          ecoreFeature="ecore:EAttribute dXP.ecore#//Base/sourceId"/>
+      <genFeatures createChild="false" propertyCategory="Base" ecoreFeature="ecore:EAttribute dXP.ecore#//Base/status"/>
+      <genFeatures createChild="false" propertyCategory="Base" ecoreFeature="ecore:EAttribute dXP.ecore#//Base/dateLastModified"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//Base/metadata"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//AcademicSession" labelFeature="#//dXP/AcademicSession/title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//AcademicSession/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//AcademicSession/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//AcademicSession/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//AcademicSession/schoolYear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//AcademicSession/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//AcademicSession/course"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//AcademicSession/user"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//Class" labelFeature="#//dXP/Class/classCode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Class/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Class/classCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Class/classType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Class/location"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//User/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//User/enabledUser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//User/userid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//User/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//User/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//UserId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//UserId/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//UserId/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//Org">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Org/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Org/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dXP.ecore#//Org/orgunit"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//OrgUnit"/>
+    <genClasses ecoreClass="dXP.ecore#//Enrolment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Enrolment/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Enrolment/primary"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dXP.ecore#//Enrolment/user"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dXP.ecore#//Enrolment/class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference dXP.ecore#//Enrolment/orgunit"/>
+    </genClasses>
+    <genClasses ecoreClass="dXP.ecore#//Metadata">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Metadata/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dXP.ecore#//Metadata/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

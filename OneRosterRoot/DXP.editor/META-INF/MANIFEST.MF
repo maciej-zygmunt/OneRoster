@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: DXP.editor;singleton:=true
+Automatic-Module-Name: DXP.editor
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: pl.edu.agh.uci.dXP.presentation.DXPEditorPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: pl.edu.agh.uci.dXP.presentation
+Require-Bundle: org.eclipse.core.runtime,
+ DXP.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.emf.edit.ui;visibility:=reexport
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="DXPEditorAdvisorApplication">
+      <!-- @generated dXP -->
+      <application>
+         <run class="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated dXP -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisor$Perspective"
+            id="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated dXP -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated dXP -->
+      <key
+            commandId="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated dXP -->
+      <actionSet
+            label="%_UI_DXPEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="DXPEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenURICommand"
+               class="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenCommand"
+               class="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="pl.edu.agh.uci.dXP.presentation.DXPEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated dXP -->
+      <actionSet
+            label="%_UI_DXPModelWizard_ActionSet_label"
+            visible="true"
+            id="pl.edu.agh.uci.dXP.presentation.DXPActionBarContributorActionSet">
+         <action
+               label="%_UI_DXPModelWizard_label"
+               class="pl.edu.agh.uci.dXP.presentation.DXPActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="pl.edu.agh.uci.dXP.presentation.DXPActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dXP -->
+      <editor
+            id="pl.edu.agh.uci.dXP.presentation.DXPEditorID"
+            name="%_UI_DXPEditor_label"
+            icon="icons/full/obj16/DXPModelFile.gif"
+            extensions="dxp"
+            class="pl.edu.agh.uci.dXP.presentation.DXPEditor"
+            contributorClass="pl.edu.agh.uci.dXP.presentation.DXPActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
