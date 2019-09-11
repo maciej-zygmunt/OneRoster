@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dXP:OneRoster xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dXP="http://www.example.org/dXP">
+  <academicsession sourceId="1221" dateLastModified="2019-09-12" title="Semestr zimowy" startDate="2019-10-04" endDate="2020-02-20" schoolYear="2019">
+    <course sourceId="122" dateLastModified="2019-09-12" title="Kino PRL" courseCode="H-K-1 Kino PRL">
+      <class sourceId="121" dateLastModified="2019-09-12" title="Wykład Kino PRL" classCode="H-K-1 G1" classType="wykład" location="D-10 105">
+        <metadata key="class_limit" value="150"/>
+      </class>
+    </course>
+    <user sourceId="599923" dateLastModified="2019-09-12" userName="Jan Nowak" enabledUser="true" identifier="58059"/>
+  </academicsession>
+  <org sourceId="11" dateLastModified="2019-09-10" name="AGH  University of Science and Technology">
+    <orgunit dateLastModified="2019-09-12" name="Wydział Humanistyczny"/>
+  </org>
+  <enrolment sourceId="1212" dateLastModified="2019-09-12" user="599923"/>
+</dXP:OneRoster>
